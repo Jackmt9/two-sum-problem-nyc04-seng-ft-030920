@@ -16,7 +16,7 @@ function binarySearchTwoSum(array, sum){
     let answers = []
     for(let i = 0; i < array.length; i++){
         let target = Math.abs(array[i] - sum)
-        if(binaryMatch(array, target) && array.indexOf(target) >= i ){
+        if(binaryMatch(array, target) && array.lastIndexOf(target) > i ){
             // shouldn't be >=
             answers.push([array[i], target])
         }
